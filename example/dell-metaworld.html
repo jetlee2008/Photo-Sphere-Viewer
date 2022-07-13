@@ -142,6 +142,12 @@
     });
 
     const virtualTour = viewer.getPlugin(PhotoSphereViewer.VirtualTourPlugin);
+
+    viewer.on('click', (e, data) => {
+    if (!data.rightclick) {
+      console.info("you are at （long："+data.longitude+",lang:"+data.latitude+")");
+    }
+  });
   </script>
 </body>
 
