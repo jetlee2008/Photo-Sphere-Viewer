@@ -90,3 +90,7 @@ img {
 .price-prefix-cont {
   margin-right: 5px;
 }
+
+.psv-tooltip {
+  max-width: 100%;
+}
