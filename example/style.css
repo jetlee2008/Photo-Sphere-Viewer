@@ -18,6 +18,20 @@ body {
   line-height: 20px;
 }
 
+a {
+  color: #0a87f2;
+  text-decoration: none;
+}
+
+a:hover,
+a:visited {
+  color: #107edb;
+}
+
+a:visited {
+  text-decoration: none;
+}
+
 .smart-popover-btn {
   position: relative;
   border-bottom: 1px dashed #767676;
@@ -25,8 +39,56 @@ body {
   display: inline-block;
 }
 
-.ps > article{
+.ps>article {
   background-color: transparent;
+}
+
+img {
+  max-width: 100%;
+}
+
+.panoramic-heading {
+  display: block;
+  margin-top: 20px;
+  margin-bottom: 5px;
+}
+
+.p13n-recs-std .col-xs-12.view-port .owl-carousel .owl-stage {
+  display: block;
+  width: 100% !important;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+
+.owl-nav {
+  display: none;
+}
+
+.owl-viewing-info {
+  display: none;
+}
+
+.owl-stage-outer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.owl-item {
+  margin-bottom: 20px;
+  width: 100% !important;
+}
+
+.owl-item .img-cont {
+  aspect-ratio: 1;
+}
+
+.price-block-cont {
+  display: flex;
+}
+
+.price-prefix-cont {
+  margin-right: 5px;
 }
 
 .psv-tooltip {
