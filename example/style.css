@@ -25,6 +25,16 @@ body {
   display: inline-block;
 }
 
-.ps > article{
+.ps>article {
   background-color: transparent;
+}
+
+img {
+  max-width: 100%;
+}
+
+.panoramic-heading{
+  display: block;
+  margin-top: 20px;
+  margin-bottom: 5px;
 }

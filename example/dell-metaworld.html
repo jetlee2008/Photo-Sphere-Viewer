@@ -24,7 +24,7 @@
   <script src="../dist/plugins/compass.js"></script>
   <script src="../dist/plugins/virtual-tour.js"></script>
 
-  <script type="text/template" id="surgeryMonitor">
+  <script type="text/template" id="surgeryMonitorProductStack">
     <div class="ps">
         <article id="210-arev" data-product-id="210-arev" class="stack-accessories ps-stack" data-sold-out="Sold Out"
     categoryid="8141" data-stack-type="stack-accessories" data-product-sold-out="False" data-is-deal="False"
@@ -211,6 +211,15 @@
   
   </script>
 
+  <script type="text/template" id="surgeryMonitor360">
+    <label class="panoramic-heading">Top View:</label>
+    <img src="./assets/metaworld/top-view.png" alt="top view" >
+    <label class="panoramic-heading">Side View:</label>
+    <img src="./assets/metaworld/side-view.png" alt="side view" >
+    <label class="panoramic-heading">Bottom View:</label>
+    <img src="./assets/metaworld/interfaces.png" alt="interfaces" >
+  </script>
+
   <script>
     const base = 'assets/metaworld/';
 
@@ -287,14 +296,28 @@
         panoData: { poseHeading: 78 },
         markers: [
           {
-            id: 'SurgeryMonitor',
+            id: 'SurgeryMonitorProductStack',
             tooltip: {
               content: 'Dell 55 4K Conference Room Monitor - C5519Q',
               position: 'top right',
             },
-            content: document.getElementById('surgeryMonitor').innerHTML,
+            content: document.getElementById('surgeryMonitorProductStack').innerHTML,
             latitude: 0,
             longitude: 0.8,
+            image: 'assets/pin-red.png',
+            width: 32,
+            height: 32,
+            anchor: 'bottom center',
+          },
+          {
+            id: 'SurgeryMonitor360',
+            tooltip: {
+              content: 'Dell 55 4K Conference Room Monitor - C5519Q',
+              position: 'top right',
+            },
+            content: document.getElementById('surgeryMonitor360').innerHTML,
+            latitude: 0.2,
+            longitude: 1.1,
             image: 'assets/pin-red.png',
             width: 32,
             height: 32,
