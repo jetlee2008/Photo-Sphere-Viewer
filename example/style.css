@@ -28,3 +28,7 @@ body {
 .ps > article{
   background-color: transparent;
 }
+
+.psv-tooltip {
+  max-width: 100%;
+}
