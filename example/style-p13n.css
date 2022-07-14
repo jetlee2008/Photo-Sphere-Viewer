@@ -1,0 +1,71 @@
+.p13n-recs-std .col-xs-12.view-port .owl-carousel .owl-stage-outer,
+.p13n-recs-std .owl-viewing-info {
+    max-width: 91%;
+    margin: 0 auto
+}
+
+.p13n-recs-std .col-xs-12.view-port .owl-viewing-info {
+    margin-bottom: 10px;
+    text-align: right
+}
+
+.p13n-recs-std .owl-carousel .owl-stage-outer .owl-stage {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex
+}
+
+.p13n-recs-std .col-xs-12.view-port .owl-carousel .owl-stage {
+    padding-left: 0 !important;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex
+}
+
+.p13n-recs-std .owl-carousel .owl-nav .owl-next,
+.p13n-recs-std .owl-carousel .owl-nav .owl-prev {
+    position: absolute;
+    top: 75px;
+    color: #007db8;
+    width: 20px;
+    height: auto
+}
+
+.p13n-recs-std .owl-carousel .owl-nav .owl-next.disabled,
+.p13n-recs-std .owl-carousel .owl-nav .owl-prev.disabled {
+    color: #cce5f1;
+    visibility: hidden !important
+}
+
+.p13n-recs-std .owl-carousel .owl-nav .owl-next {
+    right: 0
+}
+
+@media all and (max-width:420px) {
+    .p13n-recs-std .owl-carousel .owl-viewing-info {
+        visibility: visible;
+        display: block
+    }
+
+    .p13n-recs-std .owl-carousel .owl-nav .owl-next,
+    .p13n-recs-std .owl-carousel .owl-nav .owl-prev {
+        visibility: visible;
+        display: block
+    }
+
+    .p13n-recs-std .owl-carousel .item {
+        width: 230px;
+        margin: auto
+    }
+
+    .p13n-recs-std .p13n-recs-peek .owl-carousel .owl-nav .owl-next,
+    .p13n-recs-std .p13n-recs-peek .owl-carousel .owl-nav .owl-prev {
+        display: none;
+        visibility: hidden
+    }
+
+    .p13n-recs-std .p13n-recs-peek .owl-carousel .item {
+        width: auto;
+        margin: 0
+    }
+}
