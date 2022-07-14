@@ -632,6 +632,30 @@
 </div>
   </script>
 
+  <script type="text/template" id="GlobalVrMarket">
+    <div>
+      <a>
+        <img src="assets/vr-introduction/Global-VR-Market.png" alt="GlobalVrMarketIntroduction" width="670" height="350">
+      </a>
+    </div>
+  </script>
+
+  <script type="text/template" id="GlobalVrTrend">
+    <div>
+      <a>
+        <img src="assets/vr-introduction/Global-VR-Trend.png" alt="GlobalVrMarketIntroduction" width="586" height="314">
+      </a>
+    </div>
+  </script>
+
+  <script type="text/template" id="QuestVrRevenue">
+    <div>
+      <a>
+        <img src="assets/vr-introduction/Quest-VR-Revenue.png" alt="GlobalVrMarketIntroduction" width="956" height="287">
+      </a>
+    </div>
+  </script>
+
   <script>
     const base = 'assets/metaworld/';
 
@@ -649,12 +673,41 @@
         markers: [
           {
             id: 'marker-1',
-            image: 'assets/pin-red.png',
-            tooltip: 'Cape Florida Light, Key Biscayne',
+            image: 'assets/target.png',
+            tooltip: {
+                content: document.getElementById('GlobalVrTrend').innerHTML,
+                position: 'bottom right'
+            },
             width: 32,
             height: 32,
             anchor: 'bottom center',
             longitude: '105deg',
+            latitude: '35deg',
+          },
+          {
+            id: 'marker-2',
+            image: 'assets/target.png',
+            tooltip: {
+                content: document.getElementById('GlobalVrMarket').innerHTML,
+                position: 'bottom right'
+            },
+            width: 32,
+            height: 32,
+            anchor: 'bottom center',
+            longitude: '65deg',
+            latitude: '35deg',
+          },
+          {
+            id: 'marker-3',
+            image: 'assets/target.png',
+            tooltip: {
+                content: document.getElementById('QuestVrRevenue').innerHTML,
+                position: 'bottom left',
+            },
+            width: 32,
+            height: 32,
+            anchor: 'bottom center',
+            longitude: '145deg',
             latitude: '35deg',
           }
         ],
