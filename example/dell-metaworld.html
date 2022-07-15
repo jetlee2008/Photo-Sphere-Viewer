@@ -2,30 +2,30 @@
 <html lang="en">
 
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Data Center Tour</title>
-  <link rel="stylesheet" href="../dist/photo-sphere-viewer.css">
-  <link rel="stylesheet" href="../dist/plugins/markers.css">
-  <link rel="stylesheet" href="../dist/plugins/compass.css">
-  <link rel="stylesheet" href="../dist/plugins/virtual-tour.css">
-  <link rel="stylesheet" href="style-ps.css">
-  <link rel="stylesheet" href="style-p13n.css">
-  <link rel="stylesheet" href="style.css">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Center Tour</title>
+    <link rel="stylesheet" href="../dist/photo-sphere-viewer.css">
+    <link rel="stylesheet" href="../dist/plugins/markers.css">
+    <link rel="stylesheet" href="../dist/plugins/compass.css">
+    <link rel="stylesheet" href="../dist/plugins/virtual-tour.css">
+    <link rel="stylesheet" href="style-ps.css">
+    <link rel="stylesheet" href="style-p13n.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-  <div id="photosphere"></div>
+    <div id="photosphere"></div>
 
-  <script src="../node_modules/three/build/three.js"></script>
-  <script src="../node_modules/uevent/browser.js"></script>
-  <script src="../dist/photo-sphere-viewer.js"></script>
-  <script src="../dist/plugins/markers.js"></script>
-  <script src="../dist/plugins/compass.js"></script>
-  <script src="../dist/plugins/virtual-tour.js"></script>
+    <script src="../node_modules/three/build/three.js"></script>
+    <script src="../node_modules/uevent/browser.js"></script>
+    <script src="../dist/photo-sphere-viewer.js"></script>
+    <script src="../dist/plugins/markers.js"></script>
+    <script src="../dist/plugins/compass.js"></script>
+    <script src="../dist/plugins/virtual-tour.js"></script>
 
-  <script type="text/template" id="surgeryMonitorProductStack">
+    <script type="text/template" id="surgeryMonitorProductStack">
     <div class="ps">
         <article id="210-arev" data-product-id="210-arev" class="stack-accessories ps-stack" data-sold-out="Sold Out"
     categoryid="8141" data-stack-type="stack-accessories" data-product-sold-out="False" data-is-deal="False"
@@ -212,7 +212,7 @@
   
   </script>
 
-  <script type="text/template" id="surgeryMonitor360">
+    <script type="text/template" id="surgeryMonitor360">
     <label class="panoramic-heading">Top View:</label>
     <img src="./assets/metaworld/top-view.png" alt="top view" >
     <label class="panoramic-heading">Side View:</label>
@@ -221,7 +221,7 @@
     <img src="./assets/metaworld/interfaces.png" alt="interfaces" >
   </script>
 
-  <script type="text/template" id="surgeryMonitorRecommended">
+    <script type="text/template" id="surgeryMonitorRecommended">
     <div class="clear-both row container p13n-recs-std " id="p13n-recs-std-98634"
     data-parameters=" +HR:top +POS:after:#accessoriesCategories +REF:p13n_ena_cat_bs" style="display: block;">
     <dl class="nls hidden" data-button.add_to_cart="Add To Cart" data-button.remove_from_cart="Remove From Cart"
@@ -632,7 +632,7 @@
 </div>
   </script>
 
-  <script type="text/template" id="GlobalVrMarket">
+    <script type="text/template" id="GlobalVrMarket">
     <div>
       <a>
         <img src="assets/vr-introduction/Global-VR-Market.png" alt="GlobalVrMarketIntroduction" width="670" height="350">
@@ -640,7 +640,7 @@
     </div>
   </script>
 
-  <script type="text/template" id="GlobalVrTrend">
+    <script type="text/template" id="GlobalVrTrend">
     <div>
       <a>
         <img src="assets/vr-introduction/Global-VR-Trend.png" alt="GlobalVrMarketIntroduction" width="586" height="314">
@@ -648,7 +648,7 @@
     </div>
   </script>
 
-  <script type="text/template" id="QuestVrRevenue">
+    <script type="text/template" id="QuestVrRevenue">
     <div>
       <a>
         <img src="assets/vr-introduction/Quest-VR-Revenue.png" alt="GlobalVrMarketIntroduction" width="956" height="287">
@@ -656,204 +656,436 @@
     </div>
   </script>
 
-  <script>
-    const base = 'assets/metaworld/';
-
-    // links.latitude/longitude is used in manual mode
-    // links.position or node.position is used in GPS mode
-    const nodes = [
-      {
-        id: '1',
-        panorama: base + '1.jpg',
-        thumbnail: base + '1.jpg',
-        name: 'One',
-        links: [
-          { nodeId: '2', latitude: 0, longitude: '100deg' },
-        ],
-        markers: [
-          {
-            id: 'marker-1',
-            image: 'assets/target.png',
-            tooltip: {
-                content: document.getElementById('GlobalVrTrend').innerHTML,
-                position: 'bottom right'
-            },
-            width: 32,
-            height: 32,
-            anchor: 'bottom center',
-            longitude: '105deg',
-            latitude: '35deg',
-          },
-          {
-            id: 'marker-2',
-            image: 'assets/target.png',
-            tooltip: {
-                content: document.getElementById('GlobalVrMarket').innerHTML,
-                position: 'bottom right'
-            },
-            width: 32,
-            height: 32,
-            anchor: 'bottom center',
-            longitude: '65deg',
-            latitude: '35deg',
-          },
-          {
-            id: 'marker-3',
-            image: 'assets/target.png',
-            tooltip: {
-                content: document.getElementById('QuestVrRevenue').innerHTML,
-                position: 'bottom left',
-            },
-            width: 32,
-            height: 32,
-            anchor: 'bottom center',
-            longitude: '145deg',
-            latitude: '35deg',
-          }
-        ],
-        position: [-80.156479, 25.666725, 3],
-        panoData: { poseHeading: 327 },
-      },
-      {
-        id: '2',
-        panorama: base + '2.jpg',
-        name: 'Two',
-        links: [
-          { nodeId: '1', latitude: 0, longitude: '120deg' },
-          { nodeId: '3', latitude: 0, longitude: '280deg' },
-          { nodeId: '4', latitude: 0, longitude: '270deg' },
-        ],
-        markers: [{
-          id: 'gif',
-          tooltip: {
-            content: 'Hi Dude!! You are Getting a Dell ',
-            position: 'top center',
-          },
-          image: 'assets/metaworld/robot.png',
-          //content: document.getElementById('latitude-5420').innerHTML,
-          width: 150,
-          height: 150,
-          longitude: 1.6,
-          latitude: -0.55,
-          listContent: 'An animated gif',
-        }],
-        position: [-80.156168, 25.666623, 3],
-        panoData: { poseHeading: 200 },
-      },
-      {
-        id: '3',
-        panorama: base + '3.1.jpg',
-        name: 'Three',
-        links: [
-          { nodeId: '2', latitude: 10, longitude: '270deg' },
-        ],
-        position: [-80.155932, 25.666498, 5],
-        panoData: { poseHeading: 0 },
-      },
-      {
-        id: '4',
-        panorama: base + '3.2.jpeg',
-        name: 'Four',
-        links: [
-          { nodeId: '2', latitude: 0, longitude: '300deg' },
-        ],
-        position: [-80.156089, 25.666357, 3],
-        panoData: { poseHeading: 78 },
-        markers: [
-          {
-            id: 'SurgeryMonitorProductStack',
-            tooltip: {
-              content: 'Dell 55 4K Conference Room Monitor - C5519Q',
-              position: 'top right',
-            },
-            content: document.getElementById('surgeryMonitorProductStack').innerHTML,
-            latitude: 0.2,
-            longitude: 1.1,
-            image: 'assets/pin-red.png',
-            width: 32,
-            height: 32,
-            anchor: 'bottom center',
-          },
-          {
-            id: 'SurgeryMonitor360',
-            tooltip: {
-              content: 'Dell 55 4K Conference Room Monitor - C5519Q',
-              position: 'top right',
-            },
-            content: document.getElementById('surgeryMonitor360').innerHTML,
-            latitude: 0.1,
-            longitude: 0.4,
-            image: 'assets/pin-red.png',
-            width: 32,
-            height: 32,
-            anchor: 'bottom center',
-          },
-          {
-            id: 'SurgeryMonitorRecommended',
-            tooltip: {
-              content: 'Dell 55 4K Conference Room Monitor - C5519Q',
-              position: 'top right',
-            },
-            content: document.getElementById('surgeryMonitorRecommended').innerHTML,
-            latitude: -0.2,
-            longitude: 0.9,
-            image: 'assets/pin-red.png',
-            width: 32,
-            height: 32,
-            anchor: 'bottom center',
-          }],
-      },
-    ];
-
-    const nodesById = {};
-    nodes.forEach(node => nodesById[node.id] = node);
-
-    const viewer = new PhotoSphereViewer.Viewer({
-      container: 'photosphere',
-      loadingImg: 'assets/photosphere-logo.gif',
-      caption: 'Cape Florida Light, Key Biscayne <b>&copy; Pixexid</b>',
-      defaultLong: '100deg',
-      plugins: [
-        PhotoSphereViewer.MarkersPlugin,
-        PhotoSphereViewer.CompassPlugin,
-        [PhotoSphereViewer.VirtualTourPlugin, {
-          positionMode: PhotoSphereViewer.VirtualTourPlugin.MODE_GPS,
-          renderMode: PhotoSphereViewer.VirtualTourPlugin.MODE_3D,
-          startNodeId: nodes[0].id,
-          preload: true,
-          // transition   : false,
-          // rotateSpeed  : false,
-          arrowPosition: 'bottom',
-
-          // client mode
-          dataMode: PhotoSphereViewer.VirtualTourPlugin.MODE_CLIENT,
-          nodes: nodes,
-
-          // server mode (mock)
-          // dataMode: PhotoSphereViewer.VirtualTourPlugin.MODE_SERVER,
-          getNode: (nodeId) => {
-            console.log('GET node ' + nodeId);
-            return Promise.resolve({
-              ...nodesById[nodeId],
-              links: nodesById[nodeId].links.map(link => ({
-                ...link,
-                name: nodesById[link.nodeId].name,
-                position: nodesById[link.nodeId].position,
-              })),
-            });
-          },
-        }],
-      ],
-    });
-
-    const virtualTour = viewer.getPlugin(PhotoSphereViewer.VirtualTourPlugin);
-
-    viewer.on('click', (e, data) => {
-      if (!data.rightclick) {
-        console.info("you are at （long：" + data.longitude + ",lang:" + data.latitude + ")");
-      }
-    });
+    <script type="text/template" id="serverProductStack">
+    <div class="ps">
+        <article id="pe_t150_15330_os_vi_vp" data-product-id="pe_t150_15330_os_vi_vp" class="stack-system ps-stack"
+        data-sold-out="Sold Out" data-stack-type="stack-system" data-product-sold-out="False" data-is-deal="False"
+        data-stock-status="None" data-is-upsell="False"
+        data-product-detail="{&quot;pe_t150_15330_os_vi_vp&quot;:{&quot;productId&quot;:&quot;pe_t150_15330_os_vi_vp&quot;,&quot;title&quot;:&quot;PowerEdge T150 Tower Server + Windows Server 2022&quot;,&quot;image&quot;:&quot;//i.dell.com/is/image/DellContent/content/dam/ss2/product-images/dell-enterprise-products/enterprise-systems/poweredge/t150/global-spi/enterprise-servers-poweredge-t150-165x119-ng.png?fmt=png-alpha&amp;wid=165&amp;hei=119&quot;,&quot;showMarketPrice&quot;:true,&quot;marketPrice&quot;:&quot;$2,523.28&quot;,&quot;dellPrice&quot;:&quot;$1,589.00&quot;,&quot;totalSavings&quot;:&quot;$934.28&quot;,&quot;dellPriceWithoutTax&quot;:&quot;$1,589.00&quot;,&quot;showclicktoseeprice&quot;:false,&quot;snpStockStatus&quot;:0,&quot;pdUrl&quot;:&quot;//www.dell.com/en-us/work/shop/servers-storage-and-networking/poweredge-t150-tower-server-windows-server-2022/spd/poweredge-t150/pe_t150_15330_os_vi_vp&quot;,&quot;isSnp&quot;:false,&quot;variantCode&quot;:&quot;poweredge-t150&quot;}}"
+        row="2">
+    
+        <!-- ProductStack generator env: Production, ver: 1.0.0.40234, gen @ 07/15/22 12:47:03
+         Denorm refresh time: 2022-7-14 20:50:29 +00:00
+        -->
+        <section class="ps-top">
+    
+            <div class="ps-compare" data-checked="false">
+                <label oc="pe_t150_15330_os_vi_vp"
+                    data-compare="{&quot;pe_t150_15330_os_vi_vp&quot;:{&quot;productId&quot;:&quot;pe_t150_15330_os_vi_vp&quot;,&quot;title&quot;:&quot;PowerEdge T150 Tower Server + Windows Server 2022&quot;,&quot;image&quot;:&quot;//i.dell.com/is/image/DellContent/content/dam/ss2/product-images/dell-enterprise-products/enterprise-systems/poweredge/t150/global-spi/enterprise-servers-poweredge-t150-165x119-ng.png?fmt=png-alpha&amp;wid=165&amp;hei=119&quot;,&quot;showMarketPrice&quot;:true,&quot;marketPrice&quot;:&quot;$2,523.28&quot;,&quot;dellPrice&quot;:&quot;$1,589.00&quot;,&quot;showclicktoseeprice&quot;:false,&quot;snpStockStatus&quot;:0,&quot;pdUrl&quot;:&quot;//www.dell.com/en-us/work/shop/servers-storage-and-networking/poweredge-t150-tower-server-windows-server-2022/spd/poweredge-t150/pe_t150_15330_os_vi_vp&quot;}}">
+                    <input type="checkbox" value="true" oc="pe_t150_15330_os_vi_vp">
+                    <span class="ps-compare-label">Compare</span>
+                </label>
+                <a class="ps-btn ps-blue" href="//www.dell.com/en-us/work/shop/compare"><span>Compare</span></a>
+            </div>
+            <div class="ps-banner ps-regular-banner">
+                <div class="ps-banner-wrapper">
+                    <span class="ps-promo-text">Extra $250 off $1,299+ with code SERVER250</span>
+                    <span class="ps-banner-corner" style=" border-left-color: green"></span>
+                </div>
+    
+            </div>
+    
+    
+            <div class="ps-image ps-product-image" aria-hidden="true">
+                <a href="//www.dell.com/en-us/work/shop/servers-storage-and-networking/poweredge-t150-tower-server-windows-server-2022/spd/poweredge-t150/pe_t150_15330_os_vi_vp"
+                    data-metrics="{&quot;variant&quot;:&quot;poweredge-t150&quot;,&quot;position&quot;:12,&quot;productid&quot;:&quot;pe_t150_15330_os_vi_vp&quot;,&quot;btnname&quot;:&quot;image&quot;,&quot;stockstatus&quot;:&quot;available&quot;}"
+                    tabindex="-1">
+                    <img src="//i.dell.com/is/image/DellContent/content/dam/ss2/product-images/dell-enterprise-products/enterprise-systems/poweredge/t150/global-spi/enterprise-servers-poweredge-t150-165x119-ng.png?fmt=png-alpha&amp;wid=165&amp;hei=119"
+                        alt="Poweredge T150" height="119" width="165">
+                </a>
+            </div>
+    
+    
+            <h3 class="ps-title">
+                <a href="//www.dell.com/en-us/work/shop/servers-storage-and-networking/poweredge-t150-tower-server-windows-server-2022/spd/poweredge-t150/pe_t150_15330_os_vi_vp"
+                    data-metrics="{&quot;variant&quot;:&quot;poweredge-t150&quot;,&quot;position&quot;:12,&quot;productid&quot;:&quot;pe_t150_15330_os_vi_vp&quot;,&quot;btnname&quot;:&quot;title&quot;,&quot;stockstatus&quot;:&quot;available&quot;}">PowerEdge
+                    T150 Tower Server + Windows Server 2022</a>
+            </h3>
+            <div class="ps-ratings-and-reviews ps-nocontent"></div>
+            <div
+                class="ps-simplified-price-with-total-savings ps-hide-simplified-price-with-total-savings ps-price new-simplified-price-with-total-savings">
+    
+                <div class="ps-orig ps-simplified">
+                    <div role="button" aria-haspopup="dialog" tabindex="0" class="smart-popover-btn"
+                        data-close-label="Close" data-title="Estimated Value"
+                        data-message="Estimated Value is Dell’s estimate of product value based on industry data, including the prices at which third-party retailers have offered or valued the same or comparable products, in its most recent survey of major online and/or off-line retailers. Third-party retailer data may not be based on actual sales.">
+                        Estimated Value
+                    </div>
+                    <span class="strike-through">$2,523.28</span>
+                </div>
+    
+    
+                <div class="ps-dell-price ps-simplified" data-testid="sharedPSPDellPrice">
+                    <span class="sr-only">Dell Price</span>
+                    <span>$1,589.00</span>
+                </div>
+    
+                <div class="ps-sav">
+                    You Save
+                    <span>$934.28</span>
+                    <span>(37%)</span>
+                </div>
+    
+    
+    
+                <div class="ps-system-stock-level"></div>
+            </div>
+    
+            <div class="ps-shipping-container ps-shipping-mfe" data-item-id="pe_t150_15330_os_vi_vp">
+                <style>
+                    .has-shipping-image .cf-dates-timeline,
+                    .has-shipping-image .cf-dates-shiptimeline {
+                        margin-left: 24px;
+                    }
+    
+                    .cf-sds-wrap .cf-shipping-msg-img {
+                        margin-left: -24px;
+                    }
+    
+                    .ndd-icon:before {
+                        font-family: Dell-Tech-icons;
+                        -webkit-font-smoothing: antialiased;
+                        content: "\1f5f2";
+                        color: green;
+                        vertical-align: middle;
+                        font-size: 20px;
+                    }
+    
+                    .ndd-msg {
+                        margin-left: 7px;
+                    }
+    
+                    .ndd-msg-expanded {
+                        margin-left: 20px;
+                    }
+    
+                    .dds__ndd-expanded {
+                        vertical-align: middle;
+                    }
+                </style>
+    
+    
+                <div class="cf-shipping-mfe cf-rr-header cf-esd-wrap show-estimated  cf-shipping-wrap content">
+                    <div class="cf-shipping-msg">
+                    </div>
+                    <div class="cf-view-dates" data-testid="viewdeliverydates"
+                        data-metrics="{&quot;btnname&quot;:&quot;modal-viewdeliverydates&quot;}" tabindex="0"
+                        aria-haspopup="true">
+                        View Delivery Dates
+                    </div>
+                </div>
+            </div>
+            <div class="iconography-feature-specs">
+    
+    
+            </div>
+            <div class="ps-product-color ps-nocontent"></div>
+            <div class="ps-show-more-less-mobile">
+                <button class="link-like-button show-more" style="display: inline-block;"
+                    data-metrics="{&quot;btnname&quot;:&quot;mobile|showmore&quot;}">
+                    Show More
+                </button>
+                <button class="link-like-button show-less" style="display: none;">
+                    Show Less
+                </button>
+            </div>
+        </section>
+        <section class="ps-show-hide">
+            <div class="ps-desc">
+                <p><b>Fully customizable:</b> Intel® Pentium® G6405T processor, Windows Server® 2022, 8GB Memory, 1TB Hard
+                    Drive and a 1 Year Warranty.</p>
+            </div>
+    
+    
+            <div class="ps-offers ps-offers-collapsed">
+    
+                <button href="javascript:;" aria-haspopup="true" smrt-modal=""
+                    smrt-messages="[&quot;\n\n<div data-attr-id=\&quot;ps-special-offers-collapsed-modal-pe_t150_15330_os_vi_vp\&quot;>\n        <div class=\&quot;ps-special-offer-modal\&quot;>\n                <div class=\&quot;ps-legal-modal-top\&quot;>\n                            <a href=\&quot;#promo-pe_t150_15330_os_vi_vp-1\&quot; data-metrics=\&quot;\&quot;>\n                                Extra $250 off select PowerEdge Servers, Networking and Storage $1,299+.\n                                <sup>1</sup>\n                            </a>\n                            <div>\n                            </div><br />\n                </div>\n                <div class=\&quot;ps-legal-modal-top\&quot;>\n                            <a href=\&quot;#promo-pe_t150_15330_os_vi_vp-2\&quot; data-metrics=\&quot;\&quot;>\n                                No interest if paid in full within 90 days on all PowerEdge servers^\n                                <sup>2</sup>\n                            </a>\n                            <div>\n                            </div><br />\n                </div>\n\n                        <div class=\&quot;ps-legal-modal-details\&quot; id=\&quot;promo-pe_t150_15330_os_vi_vp-1\&quot;>\n                            <span>1.</span>\n                            Extra $250 off select PowerEdge Servers, Networking and Storage $1,299+ with coupon SERVER250.\n                            <br /><br />\n                            Expires 7/18/2022\n                        </div>\n                            <div>\n                                <small class=\&quot;ps-legal-modal-small\&quot;>SERVER250: Offer expires 7/18/2022 @ 8am ET. Coupon excludes select order codes. Coupon valid with select other offers and coupons. Exclusions apply. Limit 5 items per customer. One time use only. Visit dell.com/sbexclusions for complete details.</small>\n                            </div>\n                            <br />\n                        <div class=\&quot;ps-legal-modal-details\&quot; id=\&quot;promo-pe_t150_15330_os_vi_vp-2\&quot;>\n                            <span>2.</span>\n                            No interest if paid in full within 90 days on all PowerEdge servers^\n                            <br /><br />\n                            &amp;nbsp\n                        </div>\n                            <div>\n                                <small class=\&quot;ps-legal-modal-small\&quot;>Only valid on purchases using Dell Business Credit.\n</br>\nThe no interest financing if paid in full within <b>90 days</b> on all PowerEdge servers promotion applies when purchased using Dell Business Credit 06/27/2022 - 07/31/2022. PROMOTION DOES NOT INCLUDE any peripheral items. Minimum purchase amount may be required. Accrued financing charges will be billed if the purchase balance is not paid in full within 90 days after the transaction posting date. Minimum monthly payments are required, but may not pay your purchase in full by the end of the promotional period due to purchase amount, promotion length, additional purchases or allocation of payments in excess of the minimum payment. Account must be kept in good standing for promotional offer to continue for duration of promotional term.</small>\n                            </div>\n                            <br />\n        </div>\n    </div>&quot;]"
+                    smrt-title="Special Offers"
+                    data-metrics="{&quot;position&quot;:12,&quot;productid&quot;:&quot;pe_t150_15330_os_vi_vp&quot;,&quot;btnname&quot;:&quot;specialoffermodal&quot;}"
+                    class="ps-special-offers-collapsed-link">
+                    View Special Offers
+                </button>
+            </div>
+            <div class="ps-fin" data-attr="financing-with-bold-title">
+                <h4>Dell Business Credit</h4>
+                <span class="ps-fin-apply">
+                    <a href="https://www.dell.com/en-us/work/lp/dell-business-credit#Terms" target="_blank"
+                        rel="noreferrer">
+                        As low as $48/mo.^
+                        <span class="sr-only">Review Payoff Chart PDF</span>
+                    </a>
+                    <a href="//www.dell.com/financing/comm/dbc/apply?s=bsd&amp;l=en&amp;cs=04&amp;c=us&amp;returnurl="
+                        class="ps-append-return-url" rel="noreferrer" target="_blank">Apply for credit</a>
+                </span>
+            </div>
+            <div class="ps-rewards-with-trophy-icon">
+                <span class="ps-dds-font-icon dds_award-trophy" aria-hidden="true"></span>
+                <span>
+                    Get up to $47 back
+                    <a href="javascript:;" aria-haspopup="true" smrt-ps-modal=""
+                        data-metrics="{&quot;position&quot;:12,&quot;productid&quot;:&quot;pe_t150_15330_os_vi_vp&quot;,&quot;btnname&quot;:&quot;rewardspopup&quot;}"
+                        smrt-title="Dell Rewards*"
+                        smrt-messages="Get up to $47 (3%)  back in rewards.* With Dell Rewards, eligible purchases qualify for free expedited delivery.*<br /><a href=&quot;//www.dell.com/en-us/work/shop/dell-rewards/cp/dell-rewards?~ck=mn&quot;>Get Rewards</a>">
+                        in rewards
+                    </a>
+                </span>
+            </div>
+            <div class="ps-oc quick-view-only">Order Code pe_t150_15330_os_vi_vp</div>
+        </section>
+        <section class="ps-show-hide-bottom">
+    
+            <div class="ps-button ps-button-system-details">
+                <div>
+                    <a class="ps-btn ps-blue"
+                        href="//www.dell.com/en-us/work/shop/servers-storage-and-networking/poweredge-t150-tower-server-windows-server-2022/spd/poweredge-t150/pe_t150_15330_os_vi_vp?view=configurations"
+                        data-metrics="{&quot;variant&quot;:&quot;poweredge-t150&quot;,&quot;position&quot;:12,&quot;productid&quot;:&quot;pe_t150_15330_os_vi_vp&quot;,&quot;btnname&quot;:&quot;customizeandbuy&quot;,&quot;stockstatus&quot;:&quot;available&quot;}"
+                        aria-label="Customize &amp; Buy PowerEdge T150 Tower Server + Windows Server 2022">Customize &amp;
+                        Buy</a>
+                </div>
+            </div>
+        </section>
+    </article>
+    </div>
   </script>
+
+    <script type="text/template" id="server360">
+    <label class="panoramic-heading">Front View:</label>
+    <img src="./assets/metaworld/server-front.png" alt="front view" >
+    <label class="panoramic-heading">Back View:</label>
+    <img src="./assets/metaworld/server-back.png" alt="back view" >
+    <label class="panoramic-heading">Bottom View:</label>
+    <img src="./assets/metaworld/server-bottom.png" alt="bottom view" >
+  </script>
+
+    <script>
+        const base = 'assets/metaworld/';
+
+        // links.latitude/longitude is used in manual mode
+        // links.position or node.position is used in GPS mode
+        const nodes = [
+            {
+                id: '1',
+                panorama: base + '1.jpg',
+                thumbnail: base + '1.jpg',
+                name: 'One',
+                links: [
+                    { nodeId: '2', latitude: 0, longitude: '100deg' },
+                ],
+                markers: [
+                    {
+                        id: 'marker-1',
+                        image: 'assets/target.png',
+                        tooltip: {
+                            content: document.getElementById('GlobalVrTrend').innerHTML,
+                            position: 'bottom right'
+                        },
+                        width: 32,
+                        height: 32,
+                        anchor: 'bottom center',
+                        longitude: '105deg',
+                        latitude: '35deg',
+                    },
+                    {
+                        id: 'marker-2',
+                        image: 'assets/target.png',
+                        tooltip: {
+                            content: document.getElementById('GlobalVrMarket').innerHTML,
+                            position: 'bottom right'
+                        },
+                        width: 32,
+                        height: 32,
+                        anchor: 'bottom center',
+                        longitude: '65deg',
+                        latitude: '35deg',
+                    },
+                    {
+                        id: 'marker-3',
+                        image: 'assets/target.png',
+                        tooltip: {
+                            content: document.getElementById('QuestVrRevenue').innerHTML,
+                            position: 'bottom left',
+                        },
+                        width: 32,
+                        height: 32,
+                        anchor: 'bottom center',
+                        longitude: '145deg',
+                        latitude: '35deg',
+                    }
+                ],
+                position: [-80.156479, 25.666725, 3],
+                panoData: { poseHeading: 327 },
+            },
+            {
+                id: '2',
+                panorama: base + '2.jpg',
+                name: 'Two',
+                links: [
+                    { nodeId: '1', latitude: 0, longitude: '120deg' },
+                    { nodeId: '3', latitude: 0, longitude: '280deg' },
+                    { nodeId: '4', latitude: 0, longitude: '270deg' },
+                ],
+                markers: [{
+                    id: 'gif',
+                    tooltip: {
+                        content: 'Hi Dude!! You are Getting a Dell ',
+                        position: 'top center',
+                    },
+                    image: 'assets/metaworld/robot.png',
+                    //content: document.getElementById('latitude-5420').innerHTML,
+                    width: 150,
+                    height: 150,
+                    longitude: 1.6,
+                    latitude: -0.55,
+                    listContent: 'An animated gif',
+                }],
+                position: [-80.156168, 25.666623, 3],
+                panoData: { poseHeading: 200 },
+            },
+            {
+                id: '3',
+                panorama: base + '3.1.jpg',
+                name: 'Three',
+                links: [
+                    { nodeId: '2', latitude: 10, longitude: '270deg' },
+                ],
+                position: [-80.155932, 25.666498, 5],
+                panoData: { poseHeading: 0 },
+                markers: [
+                    {
+                        id: 'ServerProductStack',
+                        tooltip: {
+                            content: 'PowerEdge T150 Tower Server + Windows Server 2022',
+                            position: 'top right',
+                        },
+                        content: document.getElementById('serverProductStack').innerHTML,
+                        latitude: -0.39,
+                        longitude: 0.57,
+                        image: 'assets/pin-red.png',
+                        width: 32,
+                        height: 32,
+                        anchor: 'bottom center',
+                    },
+                    {
+                        id: 'Server360',
+                        tooltip: {
+                            content: 'PowerEdge T150 Tower Server + Windows Server 2022',
+                            position: 'top right',
+                        },
+                        content: document.getElementById('server360').innerHTML,
+                        latitude: -0.42,
+                        longitude: 0.65,
+                        image: 'assets/pin-red.png',
+                        width: 32,
+                        height: 32,
+                        anchor: 'bottom center',
+                    },
+                ]
+            },
+            {
+                id: '4',
+                panorama: base + '3.2.jpeg',
+                name: 'Four',
+                links: [
+                    { nodeId: '2', latitude: 0, longitude: '300deg' },
+                ],
+                position: [-80.156089, 25.666357, 3],
+                panoData: { poseHeading: 78 },
+                markers: [
+                    {
+                        id: 'SurgeryMonitorProductStack',
+                        tooltip: {
+                            content: 'Dell 55 4K Conference Room Monitor - C5519Q',
+                            position: 'top right',
+                        },
+                        content: document.getElementById('surgeryMonitorProductStack').innerHTML,
+                        latitude: 0.2,
+                        longitude: 1.1,
+                        image: 'assets/pin-red.png',
+                        width: 32,
+                        height: 32,
+                        anchor: 'bottom center',
+                    },
+                    {
+                        id: 'SurgeryMonitor360',
+                        tooltip: {
+                            content: 'Dell 55 4K Conference Room Monitor - C5519Q',
+                            position: 'top right',
+                        },
+                        content: document.getElementById('surgeryMonitor360').innerHTML,
+                        latitude: 0.1,
+                        longitude: 0.4,
+                        image: 'assets/pin-red.png',
+                        width: 32,
+                        height: 32,
+                        anchor: 'bottom center',
+                    },
+                    {
+                        id: 'SurgeryMonitorRecommended',
+                        tooltip: {
+                            content: 'Dell 55 4K Conference Room Monitor - C5519Q',
+                            position: 'top right',
+                        },
+                        content: document.getElementById('surgeryMonitorRecommended').innerHTML,
+                        latitude: -0.2,
+                        longitude: 0.9,
+                        image: 'assets/pin-red.png',
+                        width: 32,
+                        height: 32,
+                        anchor: 'bottom center',
+                    }],
+            },
+        ];
+
+        const nodesById = {};
+        nodes.forEach(node => nodesById[node.id] = node);
+
+        const viewer = new PhotoSphereViewer.Viewer({
+            container: 'photosphere',
+            loadingImg: 'assets/photosphere-logo.gif',
+            caption: 'Cape Florida Light, Key Biscayne <b>&copy; Pixexid</b>',
+            defaultLong: '100deg',
+            plugins: [
+                PhotoSphereViewer.MarkersPlugin,
+                PhotoSphereViewer.CompassPlugin,
+                [PhotoSphereViewer.VirtualTourPlugin, {
+                    positionMode: PhotoSphereViewer.VirtualTourPlugin.MODE_GPS,
+                    renderMode: PhotoSphereViewer.VirtualTourPlugin.MODE_3D,
+                    startNodeId: nodes[0].id,
+                    preload: true,
+                    // transition   : false,
+                    // rotateSpeed  : false,
+                    arrowPosition: 'bottom',
+
+                    // client mode
+                    dataMode: PhotoSphereViewer.VirtualTourPlugin.MODE_CLIENT,
+                    nodes: nodes,
+
+                    // server mode (mock)
+                    // dataMode: PhotoSphereViewer.VirtualTourPlugin.MODE_SERVER,
+                    getNode: (nodeId) => {
+                        console.log('GET node ' + nodeId);
+                        return Promise.resolve({
+                            ...nodesById[nodeId],
+                            links: nodesById[nodeId].links.map(link => ({
+                                ...link,
+                                name: nodesById[link.nodeId].name,
+                                position: nodesById[link.nodeId].position,
+                            })),
+                        });
+                    },
+                }],
+            ],
+        });
+
+        const virtualTour = viewer.getPlugin(PhotoSphereViewer.VirtualTourPlugin);
+
+        viewer.on('click', (e, data) => {
+            if (!data.rightclick) {
+                console.info("you are at （long：" + data.longitude + ",lang:" + data.latitude + ")");
+            }
+        });
+    </script>
 </body>
 
 </html>
